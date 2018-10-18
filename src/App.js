@@ -14,7 +14,7 @@ class App extends Component {
   }
 
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     let suits = ['♥︎', '⬥', '♠︎', '♣︎'];
     let values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
     for (let i = 0; i < values.length; i++){
@@ -38,12 +38,6 @@ class App extends Component {
   }
 
 
-  showCards = (e) => {
-    let cards = this.state.deck;
-    e.preventDefault();
-    this.setState({deck: cards})
-  }
-
   
 
 
@@ -52,9 +46,8 @@ class App extends Component {
       <div className="App">
         <div className="Title"> 
         <h2>Way2B1 Card Game! </h2> </div>
-        <div className="Button"> <button onClick={this.showCards}> Display Cards </button>
         <div className="Button"> <button onClick={this.shuffle}> Shuffle Cards!
-        </button></div>
+        </button>
         </div>
         <div className = "cardContainer"> 
         {this.state.deck.map((card) => {
@@ -66,7 +59,7 @@ class App extends Component {
 
               />
             );
-          })}
+          })};
         </div>
       </div>
     );
@@ -76,8 +69,27 @@ class App extends Component {
 
 
 
+// { props.businesses.map((business)=>{
+//   return (
+//     <div key={ business.id } className="col-md-5" style={{ marginBottom: "2rem" }}>
+//       <div className="business__name">
+//           <h5>{ business.name }</h5>
+//           <p className="business__address">Address: <span>
+//             { business.vicinity }
+//           </span></p>
+//       </div>
+//       <button className="business__button">
+//         <Link to={{ 
+//         pathname: `/business/${business.reference}`,
+//         state: { business: business.place_id }
+        
+// }) }}}>View Business</Link>
+//       </button>
+//     </div>
+//    )
+
 export default App;
 
 
 
-            
+                
