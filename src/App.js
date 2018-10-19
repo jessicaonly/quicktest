@@ -56,7 +56,6 @@ class App extends Component {
        cardClass='float'
        name={card}
        header='http://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-fournier-505-1_grande.jpg?v=1530155575'
-
               />
             );
           })};
@@ -66,27 +65,6 @@ class App extends Component {
   }
 }
 
-
-
-
-// { props.businesses.map((business)=>{
-//   return (
-//     <div key={ business.id } className="col-md-5" style={{ marginBottom: "2rem" }}>
-//       <div className="business__name">
-//           <h5>{ business.name }</h5>
-//           <p className="business__address">Address: <span>
-//             { business.vicinity }
-//           </span></p>
-//       </div>
-//       <button className="business__button">
-//         <Link to={{ 
-//         pathname: `/business/${business.reference}`,
-//         state: { business: business.place_id }
-        
-// }) }}}>View Business</Link>
-//       </button>
-//     </div>
-//    )
 
 export default App;
 
